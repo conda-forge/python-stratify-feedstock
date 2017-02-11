@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/SciTools-incubator/{{ name }}/archive/v{{ version }}.tar.gz
+  fn: python-stratify-{{ version }}.tar.gz
+  url: https://github.com/SciTools-incubator/python-stratify/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -30,7 +30,7 @@ test:
     - stratify
 
 about:
-  home: https://github.com/SciTools-incubator/{{ name }}
+  home: https://github.com/SciTools-incubator/python-stratify
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
