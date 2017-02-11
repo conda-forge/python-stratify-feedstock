@@ -7,7 +7,7 @@ Package license: BSD 3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: Vectorized interpolators that are especially useful for Nd vertical interpolation/stratification of atmospheric and oceanographic datasets
+Summary: Vectorized interpolators that are especially useful for Nd vertical interpolation/stratification of atmospheric and oceanographic datasets.
 
 
 
@@ -16,7 +16,7 @@ Current build status
 
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-stratify-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-stratify-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-stratify-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-stratify-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-stratify-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-stratify-feedstock/branch/master)
 
 Current release info
 ====================
