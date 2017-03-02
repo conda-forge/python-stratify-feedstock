@@ -1,6 +1,6 @@
 {% set name = "python-stratify" %}
-{% set version = "0.1a1" %}
-{% set sha256 = "dc98cf7d104f6fb33c2672558504c66331a16f437d81aaee1259f838af35d9d1" %}
+{% set version = "0.1a2" %}
+{% set sha256 = "60354ac1e083452deaa8c32fc58cb0873479ed18092b05e9d6c1f7b3ce921ada" %}
 
 package:
   name: {{ name|lower }}
@@ -39,6 +39,7 @@ about:
 extra:
   recipe-maintainers:
     - bjlittle
+    - cpelley
     - lbdreyer
     - ocefpaf
     - pelson
