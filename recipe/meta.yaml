@@ -19,11 +19,11 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy x.x
+    - numpy 1.11.*
     - cython
   run:
     - python
-    - numpy x.x
+    - numpy >=1.11
 
 test:
   imports:
