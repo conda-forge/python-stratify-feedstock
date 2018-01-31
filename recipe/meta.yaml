@@ -1,6 +1,6 @@
 {% set name = "python-stratify" %}
-{% set version = "0.1a2" %}
-{% set sha256 = "60354ac1e083452deaa8c32fc58cb0873479ed18092b05e9d6c1f7b3ce921ada" %}
+{% set version = "0.1" %}
+{% set sha256 = "e154383bd2336122d153daa85f5ec9f5ba7639df0bf6ee66a52a7fb7b30d3377" %}
 
 package:
   name: {{ name|lower }}
@@ -19,11 +19,11 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy x.x
+    - numpy 1.11.*
     - cython
   run:
     - python
-    - numpy x.x
+    - numpy >=1.11
 
 test:
   imports:
