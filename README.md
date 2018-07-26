@@ -14,14 +14,16 @@ Summary: Vectorized interpolators that are especially useful for Nd vertical int
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-stratify-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-stratify-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-stratify-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-stratify-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-stratify-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-stratify-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/python-stratify-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/python-stratify-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/python-stratify-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/python-stratify-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/python-stratify-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/python-stratify-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-stratify/badges/version.svg)](https://anaconda.org/conda-forge/python-stratify)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-stratify/badges/downloads.svg)](https://anaconda.org/conda-forge/python-stratify)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--stratify-green.svg)](https://anaconda.org/conda-forge/python-stratify) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-stratify.svg)](https://anaconda.org/conda-forge/python-stratify) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-stratify.svg)](https://anaconda.org/conda-forge/python-stratify) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-stratify.svg)](https://anaconda.org/conda-forge/python-stratify) |
 
 Installing python-stratify
 ==========================
