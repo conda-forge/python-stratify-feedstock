@@ -1,26 +1,23 @@
-{% set name = "python-stratify" %}
 {% set version = "0.1" %}
-{% set sha256 = "e154383bd2336122d153daa85f5ec9f5ba7639df0bf6ee66a52a7fb7b30d3377" %}
 
 package:
-  name: {{ name|lower }}
+  name: python-stratify
   version: {{ version }}
 
 source:
-  fn: python-stratify-{{ version }}.tar.gz
   url: https://github.com/SciTools-incubator/python-stratify/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: e154383bd2336122d153daa85f5ec9f5ba7639df0bf6ee66a52a7fb7b30d3377
 
 build:
   number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
+    - pip
     - numpy
     - cython
   run:
