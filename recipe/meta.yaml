@@ -1,4 +1,4 @@
-{% set version = "0.1" %}
+{% set version = "0.1.1" %}
 
 package:
   name: python-stratify
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/SciTools-incubator/python-stratify/archive/v{{ version }}.tar.gz
-  sha256: e154383bd2336122d153daa85f5ec9f5ba7639df0bf6ee66a52a7fb7b30d3377
+  sha256: 261d7ad413542392d5f897c9751db6583a850e686e311aeef57a6e298b37b30e
 
 build:
   number: 1001
