@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://github.com/SciTools-incubator/python-stratify
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Vectorized interpolators that are especially useful for Nd vertical interpolation/stratification of atmospheric and oceanographic datasets.'
