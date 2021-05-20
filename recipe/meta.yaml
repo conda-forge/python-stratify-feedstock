@@ -1,16 +1,17 @@
-{% set version = "0.1.1" %}
+{% set name = "stratify" %}
+{% set version = "0.2.post0" %}
 
 package:
   name: python-stratify
   version: {{ version }}
 
 source:
-  url: https://github.com/SciTools-incubator/python-stratify/archive/v{{ version }}.tar.gz
-  sha256: 261d7ad413542392d5f897c9751db6583a850e686e311aeef57a6e298b37b30e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: baa6c1134cd31635badbf9789cf8898f9fb77dc6e0b5aac51f0deaa5c8b63083
 
 build:
-  number: 1004
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
   build:
@@ -20,10 +21,10 @@ requirements:
     - pip
     - numpy
     - cython
+    - setuptools-scm
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - cython
 
 test:
   imports:
