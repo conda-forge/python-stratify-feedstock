@@ -10,9 +10,9 @@ source:
   sha256: c2d95042632864e8c774ca5c3641cb59cca1dedd50ecd9f8fda7fab3264139a4
 
 build:
-  skip: true  # [win or py<38]
+  skip: true  # [py<39]
   number: 0
-  script: {{ PYTHON }} -m pip install --no-deps .
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -26,9 +26,14 @@ requirements:
     - pip
     - numpy
     - cython
-    - setuptools-scm
+    - setuptools-scm >=7
+    - setuptools >=61
   run:
     - python
+    # doesn't seem right :-/
+    - cython
+    # dask[array] is dask+numpy, so core is fine here.
+    - dask-core
     - {{ pin_compatible('numpy') }}
 
 test:
