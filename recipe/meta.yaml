@@ -1,5 +1,5 @@
 {% set name = "stratify" %}
-{% set version = "0.2.post0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: python-stratify
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: baa6c1134cd31635badbf9789cf8898f9fb77dc6e0b5aac51f0deaa5c8b63083
+  sha256: c2d95042632864e8c774ca5c3641cb59cca1dedd50ecd9f8fda7fab3264139a4
 
 build:
   skip: true  # [win or py<38]
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
@@ -40,7 +40,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Vectorized interpolators that are especially useful for Nd vertical interpolation/stratification of atmospheric and oceanographic datasets.'
+  summary: Vectorized interpolators that are especially useful for Nd vertical interpolation/stratification of atmospheric and oceanographic datasets.
 
 extra:
   recipe-maintainers:
