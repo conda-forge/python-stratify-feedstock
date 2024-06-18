@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py<39]
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
@@ -34,7 +35,6 @@ requirements:
     - cython
     # dask[array] is dask+numpy, so core is fine here.
     - dask-core
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
