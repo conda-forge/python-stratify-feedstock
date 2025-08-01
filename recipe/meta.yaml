@@ -1,4 +1,3 @@
-{% set python_min = '3.11' %}
 {% set name = "stratify" %}
 {% set version = "0.4.0" %}
 
@@ -11,6 +10,7 @@ source:
   sha256: 582f6fac7e829a11a75f96424284816f4913f1453a90d5b7869df17ecddd1ec1
 
 build:
+  skip: true  # [py<311]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -30,7 +30,7 @@ requirements:
     - setuptools-scm >=8
     - setuptools >=77.3.0
   run:
-    - python >={{ python_min }}
+    - python
     - cython >=3.1.0
     # dask[array] is dask+numpy, so core is fine here.
     - dask-core >=2025.7.0
