@@ -1,40 +1,39 @@
 {% set name = "stratify" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: python-stratify
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c2d95042632864e8c774ca5c3641cb59cca1dedd50ecd9f8fda7fab3264139a4
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 582f6fac7e829a11a75f96424284816f4913f1453a90d5b7869df17ecddd1ec1
 
 build:
-  skip: true  # [py<39]
-  number: 3
+  skip: true  # [py<311]
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
+    - cython >=3.1.0                         # [build_platform != target_platform]
+    - numpy >=2                              # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
     - pip
-    - numpy
-    - cython
-    - setuptools-scm >=7
-    - setuptools >=61
+    - numpy >=2
+    - cython >=3.1.0
+    - setuptools-scm >=8
+    - setuptools >=77.3.0
   run:
     - python
-    # doesn't seem right :-/
-    - cython
+    - cython >=3.1.0
     # dask[array] is dask+numpy, so core is fine here.
-    - dask-core
+    - dask-core >=2025.7.0
 
 test:
   imports:
@@ -54,3 +53,4 @@ extra:
     - lbdreyer
     - ocefpaf
     - pelson
+    - HGWright
